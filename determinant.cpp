@@ -60,12 +60,13 @@ int determinant(int **matrix, int size)
             //firstRowCol * determinant of the matrix not in firstRowCol's row or col
             //must decrease size with each recursive call
             det += sign * matrix[0][firstRowCol] * determinant(smallMatrix, size - 1); 
-        }
 
-        //free memory 
-        for(int row = 0; row < size - 1; row++)
-           delete [] smallMatrix[row]; 
-        delete [] smallMatrix;
+            //free memory 
+            for(int row = 0; row < size - 1; row++)
+               delete [] smallMatrix[row]; 
+            delete [] smallMatrix;
+
+        }
     }
 
     return det;

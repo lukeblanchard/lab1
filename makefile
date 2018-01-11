@@ -18,4 +18,4 @@ ${OBJS}: ${SRCS}
 	${CXX} ${CXXFLAGS} -c ${@:.o=.cpp}
 
 clean: 
-	rm ${OBJS}
+	rm -f main ${OBJS}
