@@ -18,10 +18,10 @@ int main()
     std::cin >> matrixSize; 
 
     //Input validation
-    invalidResponse = validateInput(std::cin.fail(), matrixSize); 
+    invalidResponse = validateInput(std::cin.fail(), matrixSize, true); 
     while(invalidResponse)
     {
-        invalidResponse = validateInput(std::cin.fail(), matrixSize); 
+        invalidResponse = validateInput(std::cin.fail(), matrixSize, true); 
     }
     
     //Dynamically allocated memory

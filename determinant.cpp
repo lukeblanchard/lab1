@@ -6,18 +6,23 @@
  ****************************************************************************/
 
 #include "determinant.hpp"
+#include <iostream>
 
 int determinant(int **matrix, int size)
 {
     int det = 0;
     
-    //Base case
-    if(size == 2) 
+    //Base cases
+    if(size == 1)
+    {
+        det += matrix[0][0];
+    }
+    else if(size == 2) 
     {
         det += matrix[0][0]*matrix[1][1] - matrix[0][1]*matrix[1][0];     
     }
     //Recursive step
-    else
+    else if(size > 2)
     {
         int sign = -1; //must alternate sign
         int **smallMatrix = nullptr; //pointer to smaller matrix for recursive call
