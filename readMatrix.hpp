@@ -7,5 +7,6 @@
 #define READMATRIX_HPP
 
 void readMatrix(int**, int); 
+bool validateInput(bool, int&);
 
 #endif
