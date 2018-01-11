@@ -20,7 +20,7 @@ int determinant(int **matrix, int size)
     else
     {
         int sign = -1; //must alternate sign
-        int **smallMatrix; //pointer to smaller matrix for recursive call
+        int **smallMatrix = nullptr; //pointer to smaller matrix for recursive call
         int offSet; //counter for determining correct index of cols in smallMatrix, details below
 
         for(int firstRowCol = 0; firstRowCol < size; firstRowCol++)
